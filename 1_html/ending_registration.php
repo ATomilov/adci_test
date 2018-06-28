@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    Завершение регистрации
+    <h1>Завершение регистрации</h1>
   </header>
   <div class="all-information">
     <div class="thanks-text">

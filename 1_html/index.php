@@ -5,32 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
   <header>
-    Регистрация пользователя
+    <h1>Регистрация пользователя</h1>
   </header>
-  <form action="ending_registration.php" method="post">
+  <form action="ending_registration.php" name="registrationForm" method="post">
     <label for="firstname">
-      Имя:
-      <input type="text" name="firstname" id="firstname">
+      Имя:<br>
+      <input type="text" name="firstname" id="firstname" required>
     </label>
     <label for="lastname">
-      Фамилия:
-      <input type="text" name="lastname" id="lastname">
+      Фамилия:<br>
+      <input type="text" name="lastname" id="lastname" required>
     </label>
     <label for="mail">
-      Почта:
-      <input type="email" name="mail" id="mail">
+      Почта:<br>
+      <input type="email" name="mail" id="mail" required>
     </label>
-    <label for="drupal7">
-      <input type="radio" name="drupal7" id="d7">
-      <input type="radio" name="drupal8" id="d8">
+    <hr>
+    <label>Курсы:</label>
+    <label for="d7">
+      <input type="radio" name="drupal" id="d7" value="Drupal 7" checked>Drupal 7
+    </label>
+    <label for="d8">
+    	<input type="radio" name="drupal" id="d8" value="Drupal 8">Drupal 8
     </label>
     <label for="additionalinformation">
       Дополнительная информация:
-      <textarea name="additionalinformation" id="additional_inf" cols="30" rows="10">
-      </textarea>
+      <textarea name="additionalinformation" id="additional_inf" cols="30" rows="10" required></textarea>
     </label>
     <div class="form-button-group">
       <button type="submit">Отправить</button>

@@ -1,0 +1,8 @@
+form[name="registrationForm"] {
+  width: 350px;
+  border: #9a9a9a 1px solid;
+  padding: 10px;
+}
+form[name="registrationForm"] > label {
+  display:block;
+}
