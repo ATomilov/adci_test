@@ -1,0 +1,114 @@
+.teaser-container {
+  width: 750px;
+  height: 380px;
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+.teaser-container-content .teaser-card:nth-child(odd) {
+  margin-right: 10px;
+}
+.teaser-container-content .teaser-card:nth-child(even) {
+  margin-left: 10px;
+}
+.arrow-left,
+.arrow-right {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffff00;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+i.fas.fa-angle-left,
+i.fas.fa-angle-right {
+  position: absolute;
+  z-index: 3;
+  top: 24%;
+  left: 33%;
+  font-size: 30px;
+}
+.teaser-title {
+  display: inline-block;
+}
+.teaser-navigation {
+  width: auto;
+  float: right;
+}
+.teaser-description {
+  position: absolute;
+  background-color: #000;
+  width: 350px;
+  height: 219px;
+  top: 0;
+  left: 0px;
+  opacity: 0;
+  
+  visibility: hidden;
+  -webkit-transition: opacity 800ms, visibility 800ms;
+  transition: opacity 800ms, visibility 800ms;
+}
+.description-text {
+  color: #ff0;
+  padding: 30px;
+}
+.hint-background:hover ~ .teaser-description {
+  visibility: visible;
+  opacity: 0.85;
+}
+.hint-background {
+  -webkit-transition: opacity 800ms, visibility 800ms;
+  transition: opacity 800ms, visibility 800ms;
+}
+.hint-background:hover {
+  opacity: 0;
+}
+.pagination {
+  display: inline-block;
+  vertical-align: middle;
+}
+.teaser-container-header {
+  border-bottom: #e9e9e9 2px solid;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+.poster {
+  position: relative;
+}
+.hint-background {
+  background-color: #000;
+  opacity: 0.85;
+  padding: 5px 15px 5px 15px;
+  display: inline-block;
+  position: absolute;
+  bottom: 20px;
+}
+.hint-text {
+  color: #ff0;
+  word-spacing: 6.5px;
+}
+.hint-background,
+.hint-text {
+  cursor: pointer;
+}
+.teaser-card {
+  display: inline-block;
+  outline: #b5b5b5 1px solid;
+  outline-offset: -1px;
+}
+.poster-image,
+.poster,
+.teaser-tags-container {
+  width: 350px;
+}
+.poster-image > img {
+  max-width: 100%;
+}
+.teaser-tags-container {
+  background: #fff;
+}
+.teaser-tags-content {
+  word-spacing: 4px;
+  padding: 10px 7px 10px 7px;
+  padding: 15px 10px 15px 10px;
+}
