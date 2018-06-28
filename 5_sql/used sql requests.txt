@@ -1,0 +1,3 @@
+$query1 = "SELECT Trainee.name, Trainee.email, Course.name, DATE_FORMAT(FROM_UNIXTIME(History.end), '%e %b %Y') AS 'finish course date' FROM History LEFT JOIN Trainee ON History.trainee_id = Trainee.trainee_id RIGHT JOIN Course ON History.course_id = Course.course_id WHERE Course.name='PHP' AND History.status=1 AND EXTRACT(MONTH FROM(FROM_UNIXTIME(History.end))) = EXTRACT(MONTH FROM(CURDATE() - INTERVAL 1 MONTH))";
+
+$query2="SELECT Course.name, COUNT(*) AS 'successful quantity' FROM History LEFT JOIN Course ON History.course_id = Course.course_id WHERE  History.status=1 AND EXTRACT(MONTH FROM(FROM_UNIXTIME(History.start))) = EXTRACT(MONTH FROM(CURDATE())) GROUP BY Course.name";
