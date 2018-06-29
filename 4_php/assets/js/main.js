@@ -3,12 +3,18 @@ jQuery(document).ready(function ($) {
       e.preventDefault();
       var targetSearch = $('#targetSearch').val();
       var mainText = $('.main-text-container').text();
-      $.ajax({
+      if (targetSearch!='') {
+        $.ajax({
           method: "POST",
           url: '../../highlight_text.php',
           data: 'targetSearch=' + targetSearch + '&mainText=' + mainText,
-      }).done(function (data) {
-        $('.main-text-container').html(data);
-      })
+      	}).done(function (data) {
+        	$('.main-text-container').html(data);
+      	})
+      }
+      else {
+        alert("Заполните поле поиска, пожалуйста");
+      }
+      
   });
 });
